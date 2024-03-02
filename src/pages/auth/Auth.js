@@ -3,17 +3,17 @@ import './auth.css';
 import regleft from '../../assets/images/regleft.png';
 import axios from 'axios';
 // otp
-// import OtpInput from 'react-otp-input';
+import OtpInput from 'react-otp-input';
 
 // true modal
-// import trudemodal from '../../assets/images/tru.png';
-// import falsemodal from '../../assets/images/false.png';
+import trudemodal from '../../assets/images/tru.png';
+import falsemodal from '../../assets/images/false.png';
 
 export default function Auth() {
   const [islogin, setIslogin] = useState(false);
-  // const [otp, setOtp] = useState('');
-  // const [sms, setSms] = useState(true);
-  // const [truemodal, setTruemodal] = useState(true);
+  const [otp, setOtp] = useState('');
+  const [sms, setSms] = useState(true);
+  const [truemodal, setTruemodal] = useState(true);
 
   // register api
 
@@ -51,7 +51,7 @@ export default function Auth() {
           </form>
         </div>
       </div>
-      {/* {sms && (
+      {sms && (
         <div className="modal">
           <div className="modal-card">
             <p>Tasdiqlash kodini kriting!</p>
@@ -64,22 +64,23 @@ export default function Auth() {
                 borderRadius: 18,
                 fontSize: 32
               }}
+              className="modal-card-input"
               value={otp}
               onChange={setOtp}
               numInputs={4}
-              renderInput={(props) => <input {...props} />}
+              renderInput={(props) => <input {...props} className="modal-card-input" />}
             />
             <span>00:59</span>
-            <span>
+            <span className="resend">
               Kod kelmadimi? <button>Qayta yuborish</button>
             </span>
 
             <button onClick={() => setTruemodal(true)}>Yuborish</button>
           </div>
         </div>
-      )} */}
+      )}
 
-      {/* <div className="modal-true">
+      <div className="modal-true">
         <div className="truecart">
           {truemodal ? (
             <>
@@ -95,7 +96,7 @@ export default function Auth() {
             </>
           )}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

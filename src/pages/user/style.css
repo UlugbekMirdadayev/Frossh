@@ -254,58 +254,853 @@ form > label > input {
   margin-top: 92px;
 }
 /* payme page end */
-/* responsive  */
 
-.personinfo {
-  /* background-color: red; */
-}
+/* RESPONSIVE */
 
-@media (max-width: 1850px) {
+@media (max-width: 1870px) {
   .person {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     width: 100%;
   }
-  .personinfo {
-    justify-content: center;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 1480px) {
-  .personleft {
-    background-color: red;
-  }
-
-  .personinfo {
-    justify-content: center;
-    gap: 20px;
-
-    background-color: red;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .person {
-    background-color: yellow;
-    width: 100%;
-  }
-
   .p-left {
-    border: none;
+    width: 900px;
+    border-right: none;
   }
-  .personright {
+  .p-right {
+    display: none;
+  }
+}
+
+@media (max-width: 1500px) {
+  .p-left {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .p-left {
     width: 100%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
-    background-color: #0085af;
+  }
+  .user-img {
+    width: 150px;
+    height: 150px;
+  }
+  .p-text-info p {
+    font-size: 44px;
+  }
+  .p-text-info b {
+    font-size: 30px;
+  }
+  @scope (.p-left) {
+    form label p {
+      font-size: 30px;
+    }
+    form button,
+    form label input {
+      width: 60% !important;
+      font-size: 30px !important;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .p-text-info p {
+    font-size: 38px;
+  }
+  .p-text-info b {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .p-left {
+    height: 720px;
+  }
+  .p-left-top {
+    padding: 45px;
+  }
+  .p-left form {
+    padding: 45px;
+  }
+  .p-left form label p,
+  .p-left form label input {
+    font-size: 24px !important;
+  }
+  .user-img {
+    width: 100px;
+    height: 100px;
+  }
+  .p-text-info p {
+    font-size: 28px;
+  }
+  .p-text-info span {
+    font-size: 18px;
+  }
+  .p-text-info b {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1145px) {
+  .person {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .personinfo {
     position: relative;
   }
-  .personright > button {
-    /* background-color: red; */
+  .personright {
+    min-width: 60px;
+    min-height: 60px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #0085af;
+    border-radius: 11px;
+    padding: 20px;
+    z-index: 3;
+    transition: all 0.5s ease;
+  }
+  .personright::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>')
+      no-repeat center center;
+    width: 30px;
+    height: 30px;
+    fill: black;
+    transition: all 0.5s ease;
+  }
+
+  .personright:hover .hidden-button {
+    display: flex !important;
+    margin-right: 50px;
+  }
+
+  .personright button {
+    display: none;
+    transition: all 0.5s ease;
+  }
+
+  .personleft,
+  .person-left,
+  .person {
+    width: 100%;
+  }
+  .personinfo .cards-container {
+    justify-content: center;
   }
 }
+
+/* @media (max-width: 1620px) {
+  .personleft {
+    width: 1050px;
+  }
+  .payme-click {
+    width: 850px;
+  }
+}
+@media (max-width: 1572px) {
+  .personleft {
+    width: 1000px;
+  }
+  .payme-click {
+    width: 800px;
+  }
+  .payme-click > button > img {
+    width: 300px;
+  }
+}
+@media (max-width: 1515px) {
+  .personleft {
+    width: 970px;
+  }
+  .payme-click {
+    width: 770px;
+  }
+  .payme-click > button > img {
+    width: 270px;
+  }
+  .payme > p {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1481px) {
+  .personleft {
+    width: 930px;
+  }
+  .payme-click {
+    width: 730px;
+  }
+  .payme-click > button > img {
+    width: 270px;
+  }
+  .payme > p {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1450px) {
+  .personleft {
+    width: 900px;
+  }
+  .payme-click {
+    width: 700px;
+  }
+  .payme-click > button > img {
+    width: 250px;
+  }
+  .payme > p {
+    font-size: 47px;
+  }
+}
+
+@media (max-width: 1410px) {
+  .personleft {
+    width: 870px;
+  }
+  .payme-click {
+    width: 670px;
+  }
+  .payme-click > button > img {
+    width: 250px;
+  }
+  .payme-click > button {
+    height: 180px;
+  }
+  .payme > p {
+    font-size: 47px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .personleft {
+    width: 850px;
+  }
+  .payme-click {
+    width: 650px;
+  }
+  .payme-click > button > img {
+    width: 240px;
+  }
+  .payme > p {
+    font-size: 45px;
+  }
+}
+@media (max-width: 1360px) {
+  .personleft {
+    width: 830px;
+  }
+  .payme-click {
+    width: 630px;
+  }
+  .payme-click > button > img {
+    width: 220px;
+  }
+  .payme-click > button {
+    height: 170px;
+  }
+  .payme > p {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1340px) {
+  .personleft {
+    width: 800px;
+  }
+  .payme-click {
+    width: 600px;
+  }
+  .payme-click > button > img {
+    width: 220px;
+  }
+  .payme > p {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1310px) {
+  .personleft {
+    width: 770px;
+  }
+  .payme-click {
+    width: 570px;
+  }
+  .payme-click > button > img {
+    width: 220px;
+  }
+  .payme > p {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1285px) {
+  .personleft {
+    width: 750px;
+  }
+  .payme-click {
+    width: 550px;
+  }
+  .payme-click > button > img {
+    width: 200px;
+  }
+  .payme-click > button {
+    height: 160px;
+  }
+  .payme > p {
+    font-size: 45px;
+  }
+}
+@media (max-width: 1260px) {
+  .personleft {
+    width: 720px;
+  }
+  .payme-click {
+    width: 520px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .personleft {
+    width: 700px;
+  }
+  .payme-click {
+    width: 580px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .personleft {
+    width: 670px;
+  }
+  .payme-click {
+    width: 550px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .personleft {
+    width: 650px;
+  }
+  .payme-click {
+    width: 530px;
+  }
+  .payme-click > button > img {
+    width: 180px;
+  }
+  .payme-click > button {
+    height: 140px;
+  }
+  .payme > p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .personleft {
+    width: 630px;
+  }
+  .payme-click {
+    width: 500px;
+  }
+  .payme-click > button > img {
+    width: 170px;
+  }
+  .payme-click > button {
+    height: 130px;
+  }
+  .payme > p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .personleft {
+    width: 600px;
+  }
+  .payme-click {
+    width: 480px;
+  }
+  .payme-click > button > img {
+    width: 170px;
+  }
+  .payme-click > button {
+    height: 130px;
+  }
+  .payme > p {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1030px) {
+  .personleft {
+    width: 570px;
+  }
+  .payme-click {
+    width: 450px;
+  }
+  .payme-click > button > img {
+    width: 150px;
+  }
+  .payme-click > button {
+    height: 120px;
+  }
+  .payme > p {
+    font-size: 38 px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .personleft {
+    width: 100%;
+  }
+  .payme-click {
+    width: 750px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 45px;
+    text-align: center;
+  }
+}
+@media (max-width: 970px) {
+  .personleft {
+    width: 100%;
+  }
+  .payme-click {
+    width: 720px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 45px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 950px) {
+  .personleft {
+    width: 100%;
+  }
+  .payme-click {
+    width: 700px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 45px;
+    text-align: center;
+  }
+}
+@media (max-width: 930px) {
+  .personleft {
+    width: 100%;
+  }
+  .payme-click {
+    width: 670px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 45px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .personleft {
+    width: 100%;
+  }
+  .payme-click {
+    width: 650px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 45px;
+    text-align: center;
+  }
+}
+@media (max-width: 870px) {
+  .personleft {
+    width: 100%;
+  }
+  .payme-click {
+    width: 620px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 45px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 840px) {
+  .payme-click {
+    width: 600px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 810px) {
+  .payme-click {
+    width: 570px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 40px;
+    text-align: center;
+  }
+  .payme > label > input {
+    width: 250px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 780px) {
+  .payme-click {
+    width: 650px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .payme-click {
+    width: 600px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 710px) {
+  .payme-click {
+    width: 570px;
+  }
+  .payme-click > button > img {
+    width: 190px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .payme-click {
+    width: 540px;
+  }
+  .payme-click > button > img {
+    width: 170px;
+  }
+  .payme-click > button {
+    height: 150px;
+  }
+  .payme > p {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+@media (max-width: 650px) {
+  .payme-click {
+    width: 510px;
+  }
+  .payme-click > button > img {
+    width: 160px;
+  }
+  .payme-click > button {
+    height: 140px;
+  }
+  .payme > p {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .payme-click {
+    width: 480px;
+  }
+  .payme-click > button > img {
+    width: 160px;
+  }
+  .payme-click > button {
+    height: 140px;
+  }
+  .payme > p {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+@media (max-width: 590px) {
+  .payme-click {
+    width: 430px;
+  }
+  .payme-click > button > img {
+    width: 140px;
+  }
+  .payme-click > button {
+    height: 120px;
+  }
+  .payme > p {
+    font-size: 39px;
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  .payme > label {
+    font-size: 35px;
+  }
+  .payme > label > input {
+    width: 230px;
+    height: 70px;
+    font-size: 35px;
+  }
+  .payme-click {
+    width: 400px;
+  }
+  .payme-click > button > img {
+    width: 130px;
+  }
+  .payme-click > button {
+    height: 110px;
+  }
+  .payme > p {
+    font-size: 39px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 510px) {
+  .payme-click {
+    width: 370px;
+  }
+  .payme-click > button > img {
+    width: 130px;
+  }
+  .payme-click > button {
+    height: 110px;
+  }
+  .payme > p {
+    font-size: 36px;
+    text-align: center;
+  }
+  .payme > button {
+    width: 380px;
+  }
+}
+@media (max-width: 490px) {
+  .payme-click {
+    width: 350px;
+  }
+  .payme-click > button > img {
+    width: 100px;
+  }
+  .payme-click > button {
+    height: 100px;
+  }
+  .payme > p {
+    font-size: 36px;
+    text-align: center;
+  }
+  .payme > .payme__btn {
+    width: 360px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 460px) {
+  .payme-click {
+    width: 330px;
+  }
+  .payme-click > button > img {
+    width: 100px;
+  }
+  .payme-click > button {
+    height: 90px;
+  }
+  .payme > p {
+    font-size: 34px;
+    text-align: center;
+  }
+  .payme > .payme__btn {
+    width: 340px;
+    font-size: 27px;
+  }
+}
+@media (max-width: 440px) {
+  .payme-click {
+    width: 300px;
+  }
+  .payme-click > button > img {
+    width: 90px;
+  }
+  .payme > label {
+    font-size: 32px;
+  }
+  .payme > label > input {
+    width: 230px;
+    height: 65px;
+    font-size: 30px;
+  }
+  .payme-click > button {
+    height: 80px;
+  }
+  .payme > p {
+    font-size: 32px;
+    text-align: center;
+  }
+  .payme > .payme__btn {
+    width: 320px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .payme-click {
+    width: 270px;
+  }
+  .payme-click > button > img {
+    width: 80px;
+  }
+  .payme > label {
+    font-size: 30px;
+  }
+  .payme > label > input {
+    width: 210px;
+    height: 60px;
+    font-size: 30px;
+  }
+  .payme-click > button {
+    height: 70px;
+  }
+  .payme > p {
+    font-size: 32px;
+    text-align: center;
+  }
+  .payme > .payme__btn {
+    width: 290px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .payme-click {
+    width: 270px;
+  }
+  .payme-click > button > img {
+    width: 80px;
+  }
+  .payme > label {
+    font-size: 30px;
+  }
+  .payme > label > input {
+    width: 210px;
+    height: 60px;
+    font-size: 30px;
+  }
+  .payme-click > button {
+    height: 70px;
+  }
+  .payme > p {
+    font-size: 30px;
+    text-align: center;
+  }
+  .payme > .payme__btn {
+    width: 270px;
+    font-size: 23px;
+    padding: 10px;
+  }
+} */

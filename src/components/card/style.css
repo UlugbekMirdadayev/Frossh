@@ -133,3 +133,82 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5.3px);
 }
+
+/********* RESPONSIVE **********/
+
+@media (max-width: 1723px) {
+  .card {
+    width: 320px;
+    padding: 16px;
+  }
+}
+@media (min-width: 1250px) and (max-width: 1256px) {
+  .card {
+    width: 310px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 1216px) {
+  .card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1116px) {
+  .card {
+    width: 280px;
+  }
+}
+@media (max-width: 1056px) {
+  .card {
+    width: 270px;
+  }
+}
+@media (max-width: 1039px) {
+  .card {
+    width: 250px;
+  }
+}
+@media (max-width: 1006px) {
+  .card {
+    width: 330px;
+  }
+}
+
+@media (max-width: 856px) {
+  .card {
+    width: 300px;
+  }
+}
+@media (max-width: 776px) {
+  .card {
+    width: 270px;
+  }
+}
+
+@media (max-width: 739px) {
+  .card {
+    width: 260px;
+  }
+}
+@media (max-width: 679px) {
+  .card {
+    width: 250px;
+  }
+}
+@media (max-width: 636px) {
+  .card {
+    width: 330px;
+  }
+
+  .justify-between {
+    justify-content: center !important;
+    gap: 40px !important;
+  }
+}
+@media (max-width: 400px) {
+  .card {
+    max-width: 280px;
+  }
+}

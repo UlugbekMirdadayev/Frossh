@@ -139,3 +139,52 @@ a {
     transform: rotate(360deg);
   }
 }
+
+/********* RESPONSIVE **********/
+
+@media (max-width: 1800px) {
+  .container {
+    padding: 0 140px;
+  }
+}
+@media (max-width: 1680px) {
+  .container {
+    padding: 0 100px;
+  }
+  h2.title {
+    font-size: 46px;
+  }
+}
+@media (max-width: 1250px) {
+  .container {
+    padding: 0 80px;
+  }
+  h2.title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    padding: 0 60px;
+  }
+  h2.title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 470px) {
+  .container {
+    padding: 0 22px;
+  }
+  .paginations button {
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+  }
+}

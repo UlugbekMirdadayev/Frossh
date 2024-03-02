@@ -65,7 +65,7 @@
   }
 }
 
-@media (max-width: 1800px) {
+/* @media (max-width: 1800px) {
   .main-header {
     padding: 7px 20px;
   }
@@ -136,5 +136,129 @@
 @media (max-width: 450px) {
   select {
     display: none;
+  }
+} */
+
+/********* RESPONSIVE **********/
+
+@media (max-width: 1380px) {
+  @scope (.main-header) {
+    .h-left {
+      justify-content: space-between;
+      gap: 150px;
+    }
+
+    .h-left :nth-child(2) {
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 1220px) {
+  @scope (.main-header) {
+    .h-left {
+      width: 50%;
+      justify-content: space-between;
+      gap: 0;
+      padding-right: 5%;
+    }
+    .h-left :nth-child(2) {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  @scope (.main-header) {
+    .h-right > a {
+      width: 180px;
+      height: 42px;
+      font-size: 18px;
+    }
+    .h-right :nth-child(3) {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  @scope (.main-header) {
+    .h-left :nth-child(2) {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 700px) {
+  @scope (.main-header) {
+    .h-left :nth-child(2) {
+      display: none;
+    }
+  }
+}
+@media (max-width: 530px) {
+  @scope (.main-header) {
+    .h-right {
+      gap: 15px;
+    }
+    .h-right > a {
+      width: 150px;
+      height: 40px;
+      font-size: 16px;
+    }
+    .h-right :nth-child(1) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@media (max-width: 492px) {
+     .h-right :nth-child(3) {
+      display: none;
+    }
+}
+@media (max-width: 440px) {
+  @scope (.main-header) {
+    .h-left {
+      gap: 0;
+    }
+    .h-right {
+      gap: 3px;
+    }
+    .h-right > a {
+      width: 130px;
+      font-size: 15px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  @scope (.main-header) {
+    .h-left {
+      width: auto !important;
+      padding: 0;
+    }
+    .h-left a {
+      font-size: 20px !important;
+    }
+    .h-right :nth-child(1) {
+      width: 35px;
+    }
+     {
+      width: 100px;
+      height: 36px;
+      font-size: 12px;
+    }
+    .h-right :nth-child(3) {
+      font-size: 14px;
+      margin: 0px 3px;
+    }
+    .h-right > a {
+      width: 100px;
+      height: 35px;
+      font-size: 12px;
+    }
+  }
+}
+@media (max-width: 340px) {
+  .h-left a {
+    font-size: 18px !important;
   }
 }

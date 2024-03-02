@@ -21,16 +21,16 @@ export default function UserInfo() {
         </div>
 
         <div className="personright">
-          <button onClick={() => navigate('/profile')}>
+          <button className="hidden-button" onClick={() => navigate('/profile')}>
             Shaxsiy ma’lumotlar <User />
           </button>
-          <button onClick={() => navigate('my-announcements')}>
+          <button className="hidden-button" onClick={() => navigate('my-announcements')}>
             E’lonlarim <Announcement />
           </button>
-          <button onClick={() => navigate('wishes')}>
+          <button className="hidden-button" onClick={() => navigate('wishes')}>
             Sevimlilar <Wishes />
           </button>
-          <button onClick={() => navigate('payment')}>
+          <button className="hidden-button" onClick={() => navigate('payment')}>
             To’ldirish
             <Plus />
           </button>

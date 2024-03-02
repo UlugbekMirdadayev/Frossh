@@ -17,7 +17,14 @@ const Announcements = () => {
         {createPagination(currentPage, 800 / 8).map((item, key) => (
           <button
             key={item + key}
-            onClick={() => setCurrentPage(item === '...' ? currentPage : item)}
+            onClick={() =>
+              setCurrentPage((curr) => {
+                if (item === '...') {
+                  return key === 1 ? curr - 1 : curr + 1;
+                }
+                return item;
+              })
+            }
             className={currentPage === item ? 'active' : undefined}
           >
             {item}

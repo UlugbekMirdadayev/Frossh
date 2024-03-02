@@ -131,7 +131,9 @@
   justify-content: space-between;
   padding: 65px 170px;
 }
-
+.modal-card-input {
+  border: 2px solid #5d6661;
+}
 .modal-card > p {
   color: #5d6661;
   text-align: center;
@@ -156,58 +158,350 @@
   line-height: normal;
 }
 
-
-
-.modal-true{
+.modal-true {
   width: 100%;
   height: 100vh;
-background: rgba(255, 255, 255, 0.01);
-box-shadow: 0px 0px 29.5px 0px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(7.949999809265137px);
-position: fixed;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-
-.truecart{
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow: 0px 0px 29.5px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7.949999809265137px);
+  position: fixed;
   display: flex;
-width: 702px;
-height: 566px;
-padding: 71px 145px;
-flex-direction: column;
-align-items: center;
-gap: 35px;
-flex-shrink: 0;
-border-radius: 57px;
-background: #FFF;
-box-shadow: 0px 0px 29.5px 0px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(20px);
+  align-items: center;
+  justify-content: center;
 }
 
-.truecart > p{
-  color: #5D6661;
-text-align: center;
-font-family: Poppins;
-font-size: 36.65px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.truecart {
+  display: flex;
+  width: 702px;
+  height: 566px;
+  padding: 71px 145px;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  flex-shrink: 0;
+  border-radius: 57px;
+  background: #fff;
+  box-shadow: 0px 0px 29.5px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
 }
-.truecart > button{
+
+.truecart > p {
+  color: #5d6661;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 36.65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.truecart > button {
   display: inline-flex;
-padding: 11px 54px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 18px;
-background: #2ECC71;
-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.50);
-color: #FFF;
-font-family: Poppins;
-font-size: 22.65px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  padding: 11px 54px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 18px;
+  background: #2ecc71;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: Poppins;
+  font-size: 22.65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1910px) {
+  .register-card {
+    width: 80%;
+  }
+  .reg-card-left > p {
+    font-size: 50px;
+  }
+  .reg-card-left > img {
+    width: 100%;
+    height: 85%;
+  }
+  .reg-card-register form input {
+    width: 100%;
+    height: 80px;
+  }
+}
+
+@media (max-width: 1800px) {
+  .reg-card-register form input {
+    font-size: 28px;
+    padding-left: 30px;
+  }
+  .reg-card-register > ::placeholder,
+  .reg-card-register > form > button {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .register-card {
+    width: 85%;
+  }
+  .reg-card-left > p {
+    font-size: 40px;
+  }
+  .reg-card-register > form {
+    gap: 15px;
+  }
+  .reg-card-register > form p {
+    font-size: 30px;
+  }
+  .reg-card-register form input {
+    height: 60px;
+  }
+  .modal-card p {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .reg-card-register {
+    width: 60%;
+  }
+}
+@media (max-width: 1140px) {
+  .reg-card-left > p {
+    font-size: 36px;
+  }
+  .reg-card-left img {
+    width: 80%;
+    height: 75%;
+  }
+  .reg-card-register > form > button,
+  .reg-card-register form input {
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 15px;
+  }
+  .reg-card-register form p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .register {
+    background: url(../../assets/images/intro-bg.png) center no-repeat;
+  }
+  .register-card {
+    width: 70%;
+    height: auto;
+    backdrop-filter: blur(3px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .reg-card-left img {
+    display: none;
+  }
+  .reg-card-left p {
+    font-size: 40px;
+  }
+  .reg-card-left {
+    height: auto;
+  }
+  .reg-card-register {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 0;
+  }
+  .reg-card-register form {
+    width: 100%;
+    padding: 40px 0 55px 0;
+    gap: 40px;
+    justify-content: start;
+  }
+  .reg-card-register > form > button,
+  .reg-card-register form input {
+    width: 70%;
+  }
+  .modal-card {
+    margin-top: 60px;
+    width: 70%;
+    height: 80%;
+  }
+  .modal-card > p {
+    font-size: 36px;
+  }
+  .modal-card > button {
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 910px) {
+  .truecart {
+    width: 70%;
+    height: auto;
+    padding: 60px 70px;
+    gap: 30px;
+  }
+
+  .truecart > p {
+    font-size: 28px;
+  }
+  .truecart > button {
+    width: 70%;
+    padding: 10px 0;
+    border-radius: 15px;
+    font-size: 18px;
+  }
+  .truecart img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 850px) {
+  .modal-card > p {
+    font-size: 28px;
+  }
+  .modal-card .resend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .modal-card div {
+    width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-card-input {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 10px !important;
+    border-radius: 13px;
+  }
+  .modal-card > button {
+    width: 200px;
+    height: 40px;
+    font-size: 26px;
+  }
+}
+@media (max-width: 860px) {
+  .modal-card {
+    height: 60%;
+    margin: 0px;
+  }
+  .modal-card > p {
+    width: 300px !important;
+    font-size: 28px;
+  }
+}
+@media (max-width: 650px) {
+  .reg-card-left p {
+    font-size: 34px;
+  }
+  .reg-card-register form {
+    padding: 30px 0 55px 0;
+    gap: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .register-card {
+    width: 90%;
+  }
+  .reg-card-register form input {
+    font-size: 18px;
+    width: 80%;
+  }
+  .modal-card {
+    height: 50%;
+  }
+
+  .truecart {
+    width: 75%;
+  }
+  .truecart p {
+    font-size: 24px;
+  }
+  .truecart button {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 500px) {
+  .reg-card-left p {
+    font-size: 28px;
+  }
+  .reg-card-register form {
+    padding: 20px 0 35px 0;
+    gap: 30px;
+  }
+  .reg-card-register form p {
+    font-size: 22px;
+  }
+  .reg-card-register form input {
+    width: 88%;
+  }
+  .modal-card {
+    width: 90%;
+    height: 60%;
+  }
+  .modal-card > p {
+    width: 280px !important;
+    font-size: 24px;
+  }
+  .truecart {
+    width: 80%;
+    padding: 50px;
+    gap: 25px;
+  }
+  .truecart p {
+    font-size: 22px;
+  }
+  .truecart img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 400px) {
+  .reg-card-register > form > button {
+    height: 45px;
+    font-size: 18px;
+    padding-left: 0;
+  }
+  .reg-card-register form p {
+    font-size: 20px;
+  }
+  .reg-card-register form input {
+    height: 40px;
+    font-size: 16px;
+  }
+  .modal-card {
+    width: 300px !important;
+    margin: 0px 20px;
+  }
+  .modal-card p,
+  .modal-card div {
+    width: 260px !important;
+  }
+  .truecart {
+    padding: 50px 30px;
+  }
+  .truecart p {
+    font-size: 18px;
+  }
+  .truecart button {
+    width: 80%;
+  }
+}
+@media (max-width: 370px) {
+  .reg-card-left p {
+    font-size: 26px;
+  }
+  .reg-card-register form p {
+    font-size: 20px;
+  }
 }

@@ -25,7 +25,7 @@ const Single = () => {
   };
   const sliderData = Array.from({ length: 6 }, (_, i) => i);
   return (
-    <div className="container announcements">
+    <div className="container single announcements">
       <h2 className="title">Namangan, Davlatobod, 5-kichik noxiya 1-uy {id}</h2>
       <div className="row">
         <div className="space">
@@ -36,7 +36,7 @@ const Single = () => {
             <Swiper ref={swiperRef} onSlideChange={handleChange} onClick={() => setOpen(!open)} className="top-slider" spaceBetween={35}>
               {sliderData.map((slide) => (
                 <SwiperSlide key={slide}>
-                  <img src={`https://picsum.photos/1053/${500 + slide}`} alt="img-slide" />
+                  <img className="single-img" src={`https://picsum.photos/1053/${500 + slide}`} alt="img-slide" />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -60,7 +60,7 @@ const Single = () => {
         <div className="between">
           <div className="user-info">
             <div className="avatar">
-              <img src={`https://picsum.photos/100/100`} alt="user-avatar" />
+              <img className="single-img-small" src={`https://picsum.photos/100/100`} alt="user-avatar" />
             </div>
             <div className="column">
               <h3 className="h3">Name Surname</h3>
@@ -191,7 +191,7 @@ const Single = () => {
         allowFullScreen
       />
       <h3 className="title">O’xshash e’lonlar</h3>
-      <div className="row">
+      <div className="row similar">
         {[1, 2, 3, 4].map((slide) => (
           <Card key={slide} item={slide} />
         ))}

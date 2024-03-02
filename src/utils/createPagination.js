@@ -26,5 +26,10 @@ export const createPagination = (currentPage, lastPage) => {
     l = i;
   }
 
+  if (rangeWithDots.length > 5) {
+    const mid = Math.ceil(rangeWithDots.length / 2);
+    rangeWithDots = [...rangeWithDots.slice(0, 2), ...rangeWithDots.slice(mid - 1, mid + 1), ...rangeWithDots.slice(-2)];
+  }
+
   return rangeWithDots;
 };

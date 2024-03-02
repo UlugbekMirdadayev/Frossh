@@ -19,7 +19,7 @@ const Residentials = () => {
   }, []);
 
   return (
-    <section className="residentials">
+    <section className="container residentials">
       <h2 className="title">Turar joy majmualari</h2>
       <div className="slide-container">
         <div className="navigations">

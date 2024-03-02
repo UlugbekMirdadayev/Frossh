@@ -14,7 +14,11 @@
 .f-right {
   width: 70%;
 }
-
+.yangicard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 .yangicard > div {
   width: 277px;
   height: 399px;
@@ -28,14 +32,15 @@
   gap: 16px;
   padding-top: 10px;
 }
-.input-rpogress > p,#v{
+.input-rpogress > p,
+#v {
   color: rgb(93, 102, 97);
-font-family: Poppins;
-font-size: 22.65px;
-font-weight: 400;
-line-height: 34px;
-letter-spacing: 0%;
-text-align: left;
+  font-family: Poppins;
+  font-size: 22.65px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0%;
+  text-align: left;
 }
 
 .input-size {
@@ -55,4 +60,27 @@ text-align: left;
   background: rgb(253, 253, 253);
   padding-left: 10px;
   margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1600px) {
+  .f-left {
+    width: 30%;
+  }
+  .f-right {
+    width: 60%;
+  }
+
+  .f-right .yangicard .card {
+    width: 300px;
+  }
+}
+@media (max-width: 1600px) {
+  .yangicard {
+    justify-content: end;
+  }
+}
+@media (max-width: 790px) {
+
 }
