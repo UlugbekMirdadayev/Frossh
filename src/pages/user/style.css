@@ -17,6 +17,7 @@
   gap: 16px;
   position: sticky;
   top: 60px;
+  transition: all 0.5s ease;
 }
 .personright > button {
   width: 300px;
@@ -432,7 +433,7 @@ form > label > input {
     border-radius: 11px;
     padding: 20px;
     z-index: 3;
-    transition: all 0.3s;
+    transition: all 0.5s;
   }
   .personright::before {
     content: '';
@@ -455,17 +456,17 @@ form > label > input {
 
   .personright button {
     display: none;
-    transition: all 0.3s;
+    transition: all 0.7s;
   }
 
   .personright:focus-within .hidden-button {
     transform: scale(0);
   }
-  .personright:focus-within {
-    width: 60px !important;
-    height: 60px !important;
-  }
 
+  .personright:focus-within {
+    transform: scale(0);
+    transition: 0.7s;
+  }
   div.container.person,
   .personleft,
   .person-left,

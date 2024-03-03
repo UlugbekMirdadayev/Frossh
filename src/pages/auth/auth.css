@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .register {
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -5,7 +8,7 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(90deg, white 50%, #8ae79d 50%);
+  background: linear-gradient(90deg, white 50%, #8acbe7 50%);
 }
 
 .register-card {
@@ -20,7 +23,13 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.ph {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+}
 .reg-card-left {
   display: flex;
   flex-direction: column;
