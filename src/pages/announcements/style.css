@@ -505,7 +505,8 @@
   padding: 16px 100px;
 }
 
-/* RESPONSIVE */
+/******* RESPONSIVE ********/
+
 @media (max-width: 1600px) {
   .similar {
     flex-wrap: wrap;

@@ -7,7 +7,7 @@ const MyAnnouncements = () => {
   const [currentPage, setCurrentPage] = useState(1);
   return (
     <>
-      <div className={'cards-container'}>
+      <div className={'cards-container my-adds'}>
         {data.map((item) => (
           <Card key={item} item={item + currentPage} editable />
         ))}

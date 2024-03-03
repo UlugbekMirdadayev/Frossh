@@ -211,7 +211,7 @@
   line-height: normal;
 }
 
-/* RESPONSIVE */
+/*********** RESPONSIVE ************/
 
 @media (max-width: 1910px) {
   .register-card {

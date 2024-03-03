@@ -211,4 +211,12 @@
   .card {
     max-width: 280px;
   }
+  .card .card-body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 380px) {
+  .card {
+    max-width: 260px;
+  }
 }
