@@ -159,11 +159,21 @@
     }
   }
 }
-@media (max-width: 492px) {
+@media (max-width: 515px) {
     .h-right  a {
-      width: 130px !important;
+      width: 110px !important;
+      height: 30px !important;
       font-size: 12px !important;
     }
+}
+
+@media (max-width: 470px) {
+  .h-right a{
+  width: 100px !important;
+font-size: 10px !important;
+    padding: 10px !important;
+    text-align: center;
+  }
 }
 @media (max-width: 440px) {
   @scope (.main-header) {
@@ -174,8 +184,8 @@
       gap: 3px;
     }
     .h-right > a {
-      width: 130px;
-      font-size: 15px;
+      width: 80px !important;
+      font-size: 8px !important;
     }
   }
 }
@@ -200,15 +210,13 @@
       font-size: 14px;
       margin: 0px 3px;
     }
-    .h-right > a {
-      width: 100px;
-      height: 35px;
-      font-size: 12px;
-    }
   }
 }
-@media (max-width: 340px) {
-  .h-left a {
-    font-size: 18px !important;
+@media (max-width: 350px) {
+  .h-left :nth-child(1) {
+    font-size: 16px !important;
+  }
+  .h-right a{
+    width: 70px !important;
   }
 }

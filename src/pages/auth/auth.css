@@ -301,7 +301,7 @@
     background: url(../../assets/images/intro-bg.png) center no-repeat;
   }
   .register-card {
-    width: 70%;
+    width: 60%;
     height: auto;
     backdrop-filter: blur(3px);
     flex-direction: column;
@@ -355,7 +355,9 @@
     padding: 60px 70px;
     gap: 30px;
   }
-
+  .register-card {
+    width: 70%;
+  }
   .truecart > p {
     font-size: 28px;
   }
