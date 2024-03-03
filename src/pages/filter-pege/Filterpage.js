@@ -63,6 +63,7 @@ export default function Filterpage() {
               ]}
               control={control}
               required
+              className="filter-select"
             />
 
             <div className="input-rpogress">

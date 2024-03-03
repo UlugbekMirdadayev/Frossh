@@ -64,6 +64,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 65px 45px;
+  gap: 30px;
 }
 .user-img {
   width: 210px;
@@ -398,6 +399,25 @@ form > label > input {
   }
 }
 
+@media (max-width: 500px) {
+  .p-left form label p {
+    font-size: 18px !important;
+  }
+  .p-left form button {
+    margin: 20px auto 0;
+    font-size: 20px;
+    gap: 0;
+    display: inline-block;
+  }
+  .p-left form button svg {
+    display: none;
+  }
+  .p-left form label input {
+    width: 150px !important;
+    height: 50px;
+    font-size: 18px !important;
+  }
+}
 /* @media (max-width: 1620px) {
   .personleft {
     width: 1050px;

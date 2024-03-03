@@ -81,3 +81,14 @@
     fill: red;
   }
 }
+
+@media (max-width: 400px) {
+  .custome-select {
+    width: 100%;
+    font-size: 18px;
+  }
+  .custome-select svg {
+    width: 25px;
+    height: 18px;
+  }
+}

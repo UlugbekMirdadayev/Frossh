@@ -327,7 +327,8 @@
   .modal-card {
     margin-top: 60px;
     width: 70%;
-    height: 80%;
+    height: auto;
+    gap: 30px;
   }
   .modal-card > p {
     font-size: 36px;
@@ -340,7 +341,7 @@
 }
 @media (max-width: 910px) {
   .truecart {
-    width: 70%;
+    width: 60%;
     height: auto;
     padding: 60px 70px;
     gap: 30px;
@@ -365,6 +366,7 @@
     font-size: 28px;
   }
   .modal-card .resend {
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -391,12 +393,15 @@
 }
 @media (max-width: 860px) {
   .modal-card {
-    height: 60%;
     margin: 0px;
+    gap: 20px;
   }
   .modal-card > p {
     width: 300px !important;
     font-size: 28px;
+  }
+  .register-card {
+    border-radius: 40px;
   }
 }
 @media (max-width: 650px) {
@@ -409,15 +414,13 @@
   }
 }
 @media (max-width: 600px) {
-  .register-card {
-    width: 90%;
-  }
   .reg-card-register form input {
     font-size: 18px;
     width: 80%;
   }
-  .modal-card {
-    height: 50%;
+  .register-card {
+    width: 90%;
+    border-radius: 30px;
   }
 
   .truecart {
@@ -447,7 +450,6 @@
   }
   .modal-card {
     width: 90%;
-    height: 60%;
   }
   .modal-card > p {
     width: 280px !important;
@@ -481,11 +483,19 @@
   }
   .modal-card {
     width: 300px !important;
-    margin: 0px 20px;
+    padding: 20px 25px;
+    margin: 0px;
+    border-radius: 35px;
   }
-  .modal-card p,
   .modal-card div {
     width: 260px !important;
+  }
+  input.modal-card-input {
+    margin: 7px !important;
+  }
+  .modal-card p,
+  .modal-card .resend {
+    width: 240px;
   }
   .truecart {
     padding: 50px 30px;
@@ -503,5 +513,10 @@
   }
   .reg-card-register form p {
     font-size: 20px;
+  }
+  .modal-card {
+    width: 280px !important;
+    padding: 20px;
+    border-radius: 30px;
   }
 }
