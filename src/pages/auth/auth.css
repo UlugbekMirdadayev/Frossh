@@ -22,6 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .ph {
   width: 100%;
@@ -37,6 +38,7 @@
   justify-content: space-between;
   height: 100%;
   padding-top: 55px;
+  padding-left: 30px;
 }
 
 .reg-card-left > p {
@@ -224,7 +226,7 @@
 
 @media (max-width: 1910px) {
   .register-card {
-    width: 80%;
+    width: 70%;
   }
   .reg-card-left > p {
     font-size: 50px;
@@ -252,7 +254,6 @@
 
 @media (max-width: 1500px) {
   .register-card {
-    width: 85%;
   }
   .reg-card-left > p {
     font-size: 40px;
