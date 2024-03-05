@@ -253,8 +253,6 @@
 }
 
 @media (max-width: 1500px) {
-  .register-card {
-  }
   .reg-card-left > p {
     font-size: 40px;
   }

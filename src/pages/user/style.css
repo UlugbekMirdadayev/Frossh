@@ -584,6 +584,9 @@ form > label > input {
   .my-adds .card {
     width: 270px;
   }
+  .p-left{
+    height: auto;
+  }
 }
 
 @media (max-width: 380px) {
