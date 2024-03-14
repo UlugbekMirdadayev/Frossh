@@ -10,12 +10,8 @@
 .filterpage:has(.form) {
   padding-bottom: 0px;
 }
-.f-left {
-  flex: 0.2;
-  gap: 20px;
-}
+
 .f-right {
-  flex: 0.8;
   display: block;
   padding-top: 0;
 }

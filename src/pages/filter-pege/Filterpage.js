@@ -76,6 +76,8 @@ export default function Filterpage() {
     }
   });
 
+
+
   const onSubmit = (values) => console.log(values);
 
   const handleFirstInputChange = (e, name, paramName) => {
@@ -137,27 +139,27 @@ export default function Filterpage() {
   );
 
   const place_types = [
-      {
-        value: 'apartment',
-        label: 'Kvartira'
-      },
-      {
-        value: 'home',
-        label: 'Xonadon'
-      },
-      {
-        value: 'dry land',
-        label: 'Quruq yer'
-      },
-      {
-        value: 'business place',
-        label: 'Biznes uchun joy'
-      },
-      {
-        value: 'skyscraper',
-        label: 'Turar joy majmuasi'
-      }
-    ],
+    {
+      value: 'apartment',
+      label: 'Kvartira'
+    },
+    {
+      value: 'home',
+      label: 'Xonadon'
+    },
+    {
+      value: 'dry land',
+      label: 'Quruq yer'
+    },
+    {
+      value: 'business place',
+      label: 'Biznes uchun joy'
+    },
+    {
+      value: 'skyscraper',
+      label: 'Turar joy majmuasi'
+    }
+  ],
     repair_types = [
       {
         value: 'bad',
