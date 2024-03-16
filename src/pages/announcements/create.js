@@ -11,6 +11,7 @@ import Checkbox from '../../components/checkbox';
 import MapContainer from '../../components/GoogleMap';
 import { getCoorDinates } from '../../utils/location';
 import './style.css';
+import Cookies from 'js-cookie';
 
 const handleRemoveImage = (image, element, seTimgFiles, setActiveIndex, setError) => {
   setActiveIndex((index) => index - 1);
@@ -188,7 +189,7 @@ const CreateAnnouncement = () => {
     axios
       .post('https://api.frossh.uz/api/announcement/create', formData, {
         headers: {
-          Authorization: 'Bearer 59|912IEqPlHGAthZX6pFeYoAwhVq4bzbXi0EaNtMR9b42777c6',
+          Authorization: `Bearer ${Cookies.get('token')}`,
           'Content-Type': 'multipart/form-data',
           Accept: 'application/json'
         }

@@ -3,23 +3,22 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import noProfileInfoImg from './warningUser.png';
 import { Link } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 export default function UserDashboard() {
   const [regions, setRegions] = useState([]);
   const [districts, setDistricts] = useState([]);
   const [quarters, setQuarters] = useState([]);
 
-  // let token = localStorage.getItem('token') || '39|yDwiROyTH3mWYbsfSYwCsrxvd7t71pXqCXjBUVQU74981666';
-  let token = localStorage.getItem('token');
-  let profileInfo = JSON.parse(localStorage.profileInfo || '{}') || {};
+  const profileInfo = JSON.parse(localStorage.profileInfo || '{}') || {};
 
   const headers = useMemo(
     () => ({
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${Cookies.get('token')}`,
       Accept: 'application/json',
       'Content-Type': 'application/json'
     }),
-    [token]
+    []
   );
 
   // GET REGIONS

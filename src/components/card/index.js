@@ -35,7 +35,7 @@ export const Card = ({ item, editable = false }) => {
         <Link to={'/top-announcements'} className="badge">
           <p>TOP</p>
         </Link>
-        <Link to={`/announcement/${item?.slug}`}>
+        <Link to={`/announcement/${item?.slug}?_a_id=${item?.id}`}>
           <div className="overlay">{item?.images?.map(navigation)}</div>
           <Swiper
             ref={swiperRef}
@@ -59,7 +59,7 @@ export const Card = ({ item, editable = false }) => {
           </Swiper>
         </Link>
       </header>
-      <Link to={`/announcement/${item?.slug}`} className="card-body">
+      <Link to={`/announcement/${item?.slug}?_a_id=${item?.id}`} className="card-body">
         <p className="pice">{item?.price} uzs</p>
         <div className="row-info">
           <p>{item?.room_count} xona</p>
@@ -73,7 +73,7 @@ export const Card = ({ item, editable = false }) => {
       {item === 5
         ? overlay
         : editable && (
-            <Link to={`/announcement?edit=${item?.slug}`} className="edit-btn">
+            <Link to={`/announcement/${item?.id}?edit=${item?.slug}&_a_id=${item?.id}`} className="edit-btn">
               <Pen />
             </Link>
           )}

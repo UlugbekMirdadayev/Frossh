@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 import { ReactComponent as Bayroq } from '../../assets/svgs/flagUz.svg';
+import Cookies from 'js-cookie';
 
 const Header = () => {
+  const token = Cookies.get('token');
   return (
     <div className="main-header">
       <header className="container">
@@ -19,12 +21,8 @@ const Header = () => {
           <select>
             <option>UZS</option>
           </select>
-          <Link id="a" to={'/announcement/create'}>
-            E’lon joylash +
-          </Link>
-          <Link id="a" to={'/auth'}>
-            Ro’yxatdan o’tish
-          </Link>
+          <Link to={'/announcement/create'}>E’lon joylash +</Link>
+          <Link to={token ? '/profile' : '/auth'}>{token ? 'Shaxsiy kabinet' : 'Ro’yxatdan o’tish'}</Link>
         </div>
       </header>
     </div>

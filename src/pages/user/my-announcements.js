@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { Card } from '../../components/card';
 import axios from 'axios';
 import { LoadingIcon } from '../../assets/svgs';
+import Cookies from 'js-cookie';
 
 const MyAnnouncements = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -13,7 +14,7 @@ const MyAnnouncements = () => {
     axios
       .get('https://api.frossh.uz/api/announcement/get-by-user', {
         headers: {
-          Authorization: 'Bearer 59|912IEqPlHGAthZX6pFeYoAwhVq4bzbXi0EaNtMR9b42777c6'
+          Authorization: `Bearer ${Cookies.get('token')}`
         }
       })
       .then(({ data }) => {

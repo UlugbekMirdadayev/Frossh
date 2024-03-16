@@ -30,6 +30,12 @@ export default function Auth() {
   const [openSelect, setOpenSelect] = useState('');
   const [step, setStep] = useState('register'); // register || login || modal-otp || modal-[success||reject]
   const [seconds, setSeconds] = useState(0);
+  const token = Cookies.get('token');
+
+  useEffect(() => {
+    if (token) navigate('/');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [navigate]);
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Fecebook, Instagram, Telegram, Appstore, GooglePlay } from '../../assets/svgs';
 import './style.css';
+import Cookies from 'js-cookie';
 
 const Footer = () => {
+  const token = Cookies.get('token');
   return (
     <footer>
       <div className="container">
@@ -11,8 +13,7 @@ const Footer = () => {
           <p>Frosh</p>
           <Link to="/about-us">Biz haqimizda!</Link>
           <Link to="/announcement/create">E’lon qo’shish</Link>
-          <Link to="/profile">Shaxsiy kabinet</Link>
-          <Link to="/auth">Ro’yxatdan o’tish</Link>
+          {token ? <Link to="/profile">Shaxsiy kabinet</Link> : <Link to="/auth">Ro’yxatdan o’tish</Link>}
         </div>
         <div className="f-contact">
           <p>Biz bilan bog’laning</p>
